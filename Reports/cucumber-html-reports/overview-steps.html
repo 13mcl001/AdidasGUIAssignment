@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>incore</td>
+              <td>1</td>
+            <td>29 Oct 2020, 12:21</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">ServiceHooks.endTest(Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="1401772881">1s 401ms</td>
+              <td class="duration" data-value="700886440">700ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ServiceHooks.initializeTest(Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="16261632704">16s 261ms</td>
+              <td class="duration" data-value="8130816352">8s 130ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.click_on_Admin_drop_down()</td>
+              <td>2</td>
+              <td class="duration" data-value="25594905500">25s 594ms</td>
+              <td class="duration" data-value="12797452750">12s 797ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.click_on_Create_New_User()</td>
+              <td>2</td>
+              <td class="duration" data-value="8579984891">8s 579ms</td>
+              <td class="duration" data-value="4289992445">4s 289ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.click_on_Create_User()</td>
+              <td>2</td>
+              <td class="duration" data-value="42444368864">42s 444ms</td>
+              <td class="duration" data-value="21222184432">21s 222ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.click_on_New_User()</td>
+              <td>2</td>
+              <td class="duration" data-value="8389622519">8s 389ms</td>
+              <td class="duration" data-value="4194811259">4s 194ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_The_First_Name()</td>
+              <td>2</td>
+              <td class="duration" data-value="2635187768">2s 635ms</td>
+              <td class="duration" data-value="1317593884">1s 317ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_the_Department()</td>
+              <td>2</td>
+              <td class="duration" data-value="2318837539">2s 318ms</td>
+              <td class="duration" data-value="1159418769">1s 159ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_the_Email()</td>
+              <td>2</td>
+              <td class="duration" data-value="2578454299">2s 578ms</td>
+              <td class="duration" data-value="1289227149">1s 289ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_the_Last_Name()</td>
+              <td>2</td>
+              <td class="duration" data-value="2633647577">2s 633ms</td>
+              <td class="duration" data-value="1316823788">1s 316ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_the_Maidan_Name()</td>
+              <td>2</td>
+              <td class="duration" data-value="2249334446">2s 249ms</td>
+              <td class="duration" data-value="1124667223">1s 124ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_the_Middle_Name()</td>
+              <td>2</td>
+              <td class="duration" data-value="2305422602">2s 305ms</td>
+              <td class="duration" data-value="1152711301">1s 152ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_the_Secondary_Phone()</td>
+              <td>2</td>
+              <td class="duration" data-value="2452729973">2s 452ms</td>
+              <td class="duration" data-value="1226364986">1s 226ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.enter_the_Work_Phone()</td>
+              <td>2</td>
+              <td class="duration" data-value="2508628362">2s 508ms</td>
+              <td class="duration" data-value="1254314181">1s 254ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.select_Gender(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="14303997324">14s 303ms</td>
+              <td class="duration" data-value="7151998662">7s 151ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.select_the_Level_of_data_access()</td>
+              <td>2</td>
+              <td class="duration" data-value="4758928006">4s 758ms</td>
+              <td class="duration" data-value="2379464003">2s 379ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.select_the_User_Role(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4490487174">4s 490ms</td>
+              <td class="duration" data-value="2245243587">2s 245ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.select_the_User_Role_type(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="47587164285">47s 587ms</td>
+              <td class="duration" data-value="23793582142">23s 793ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.select_the_User_type(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="14293438765">14s 293ms</td>
+              <td class="duration" data-value="7146719382">7s 146ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Userrunner.validate_User_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="41092744980">41s 092ms</td>
+              <td class="duration" data-value="20546372490">20s 546ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginrunner.click_on_login_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="2416573191">2s 416ms</td>
+              <td class="duration" data-value="1208286595">1s 208ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginrunner.enter_User_Name()</td>
+              <td>2</td>
+              <td class="duration" data-value="7224139856">7s 224ms</td>
+              <td class="duration" data-value="3612069928">3s 612ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginrunner.enter_password()</td>
+              <td>2</td>
+              <td class="duration" data-value="2311278774">2s 311ms</td>
+              <td class="duration" data-value="1155639387">1s 155ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginrunner.navigate_to_the_URL()</td>
+              <td>2</td>
+              <td class="duration" data-value="215022485">215ms</td>
+              <td class="duration" data-value="107511242">107ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>48</td>
+            <td class="duration">4m 21s 048ms</td>
+            <td class="duration">5s 438ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
